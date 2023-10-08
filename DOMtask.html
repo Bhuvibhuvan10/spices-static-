@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .mainbox{
+            border:3px solid red;
+            width:100%;
+            height: 500px;
+            margin:10px;
+            padding:10px;
+            display: flex;
+        }
+        .inner{
+            border:3px solid blue;
+            width:fit-content;
+            height: fit-content;
+            margin:10px;
+            padding: 10px;
+
+                }
+    </style>
+</head>
+<body id="body">
+    <script>
+ 
+ var a=[ res1={
+ "name": "Domino's",
+ "city": "Delhi",
+ "location_id": 1,
+ "city_id": 1,
+ "locality": "Shalimar Bagh",
+ "thumb": [
+ "Assets/breakfast.jpg",
+ "Assets/dinner.png",
+ "Assets/drinks.png",
+ "Assets/dinner.png"
+ ],
+ "aggregate_rating": 4.2,
+ "rating_text": "Very Good",
+ "min_price": 666,
+ "contact_number": 919453524651,
+ "cuisine": [
+ { "id": 1, "c-name": "North Indian" },
+ { "id": 4, "c-name": "Fast Food" }
+ ],
+ "image": "Assets/breakfast.jpg",
+ "mealtype_id": 1
+ },
+ res2={
+ "name": "KFC",
+ "city": "Delhi",
+ "location_id": 1,
+ "city_id": 1,
+ "locality": "Shalimar Bagh",
+ "thumb": [
+ "Assets/breakfast.jpg",
+ "Assets/dinner.png",
+ "Assets/drinks.png",
+ "Assets/dinner.png"
+ ],
+ "aggregate_rating": 4.5,
+ "rating_text": "Excellent",
+ "min_price": 333,
+ "contact_number": 919453524651,
+ "cuisine": [
+ { "id": 2, "c-name": "South Indian" },
+ { "id": 4, "c-name": "Fast Food" }
+ ],
+ "image": "Assets/breakfast.jpg",
+ "mealtype_id": 1
+ },
+ res3={
+ "name": "Burger King",
+ "city": "Delhi",
+ "location_id": 1,
+ "city_id": 1,
+ "locality": "Shalimar Bagh",
+ "thumb": [
+ "Assets/breakfast.jpg",
+ "Assets/dinner.png",
+ "Assets/drinks.png",
+ "Assets/dinner.png"
+ ],
+ "aggregate_rating": 4.5,
+ "rating_text": "Excellent",
+ "min_price": 999,
+ "contact_number": 919453524651,
+ "cuisine": [
+ { "id": 2, "c-name": "South Indian" },
+ { "id": 4, "c-name": "Fast Food" }
+ ],
+ "image": "Assets/breakfast.jpg",
+ "mealtype_id": 1
+ },
+ res4={
+ "name": "Baba Ka Dhaba",
+ "city": "Delhi",
+ "location_id": 5,
+ "city_id": 1,
+ "locality": "Anand Vihar",
+ "thumb": [
+ "Assets/breakfast.jpg",
+ "Assets/dinner.png",
+ "Assets/drinks.png",
+ "Assets/dinner.png"
+ ],
+ "aggregate_rating": 3.5,
+ "rating_text": "Excellent",
+ "min_price": 599,
+ "contact_number": 919453524651,
+ "cuisine": [
+ { "id": 2, "c-name": "South Indian" },
+ { "id": 4, "c-name": "Fast Food" }
+ ],
+ "image": "Assets/breakfast.jpg",
+ "mealtype_id": 2
+ }
+]
+
+const body=document.querySelector('#body');
+
+const box=document.createElement('div');
+box.className='mainbox';
+
+a.map(ele=>{
+    var innerbox=document.createElement('div');
+    innerbox.className='inner';
+    box.appendChild(innerbox);
+
+    var h1=document.createElement('p');
+    h1.innerHTML=ele.name;
+    h1.style.fontWeight='bolder';
+    h1.style.color="red";
+    innerbox.appendChild(h1);
+
+    var h2=document.createElement('p');
+    h2.innerHTML=ele.city;
+    h2.style.fontWeight='smaller';
+    h2.style.fontStyle="italic";
+    innerbox.appendChild(h2);
+
+    var h3=document.createElement('p');
+    h3.innerHTML=ele.locality;
+    h3.style.fontWeight='smaller';
+    h3.style.fontStyle='italic';
+    innerbox.appendChild(h3);
+
+    var h4=document.createElement('h3');
+    h4.innerHTML='cuisine:';
+    innerbox.appendChild(h4);
+
+   
+ 
+    var butt=document.createElement('button');
+    butt.innerHTML=ele.cusine;
+    innerbox.appendChild(butt);
+  
+
+   var price = document.createElement('h3');
+   price.innerHTML='Price:';
+   innerbox.appendChild(price);
+
+   var pval=document.createElement('p');
+   pval.innerHTML=ele.min_price;
+   innerbox.appendChild(pval);
+
+   var contact=document.createElement('h3');
+   contact.innerHTML='To Contact:';
+   innerbox.appendChild(contact);
+
+   var num=document.createElement('p');
+   num.innerHTML=ele.contact_number;
+   innerbox.appendChild(num);
+   
+
+    
+})
+body.appendChild(box);
+
+    </script>
+    
+</body>
+</html>

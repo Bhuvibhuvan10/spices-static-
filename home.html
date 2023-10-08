@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    #navbar{
+        position: sticky;
+        top:0;
+        left:0;
+        z-index: 100;
+        box-shadow: 5px 5px 20px black;
+        background-color:black;
+    }
+    .navbar img{
+        width:100px;
+        height: 100px;
+    }
+    .navbar-brand span{
+      color:chartreuse !important;
+    }
+    .navbar .navbar-brand{
+    font-size: 25px;
+    font-weight:800;
+    color:chartreuse !important;
+    }
+    #navbarSupportedContent{
+        color: white;
+        border-bottom: 2px solid transparent;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    #navbarSupportedContent a:hover{
+        border-bottom: 2px solid chartreuse;
+    }
+    #navbarSupportedContent button{
+        background-color:chartreuse ;
+        width:6rem;
+        border-radius: 15px;
+    }
+    section{
+        width:100%;
+        min-height: 100vh;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    /* home */
+    #home{
+        
+        background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.8)),url(./824x465-155.png);
+        background-size: cover;
+        background-position:center ;
+        flex-direction: column;
+    }
+    #home h1 span{
+      color:chartreuse;
+    }
+    #home h1{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 100px;
+        
+        letter-spacing: 3px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: 0px 1px 0px #ccc,
+                    0px 2px 0px #ccc,
+                    0px 3px 0px #ccc,
+                    0px 4px 0px #ccc,
+                    0px 5px 0px #ccc,
+                    0px 6px 0px #ccc,
+                    0px 7px 0px #ccc;
+        color: chartreuse;
+    }
+    #home p{
+        font-size: 18px;
+        color:#fff     ;
+    }
+    #home .input-group{
+        width: 40%;
+        height: 45px;
+    }
+    .search{
+        background: green !important;
+        color:black;
+        box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+    }
+    .sigin{
+        background: green !important;
+        color:white;
+        box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+
+    }
+    /* ABOUT */
+    #about{
+        
+        background-color: rgb(193, 206, 10);
+    }
+    #about h1{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 100px;
+        font-weight: 800;
+        font-size: 50px;
+        
+    }
+    
+   #about img{
+    margin: 100px 100px 0 0;
+
+   }
+    /* PRODUCT */
+    #product{
+        background: rgb(193, 206, 10);
+    }
+    #product h1{
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    #product img{
+        width:200px;
+        height:200px;
+    }
+    .card{
+        width:250px;
+        height:300px;
+        background: #e5e5e5 !important;
+        border-radius: 20 px !important;
+        box-shadow: 15px 20px 20px rgba(0,0,0,.3),
+                    inset 4px 4px 10px white;
+        border: none;
+        overflow:hidden;
+        justify-content: center;
+        align-items: center;
+        margin:20px 60px;
+    }
+    .card:hover{
+        box-shadow: inset 5px 5px 10px rgba(0,0,0,.3),
+                    inset -4px -4px 10px white;
+        transition: .2s;
+    }
+    /* CONTACT */
+    .footer-distributed{
+        color:#fff;
+        background-color: black;
+        position: sticky;
+        top:0;
+        left:0;
+        z-index: 100;
+        box-shadow: 5px 5px 20px black;
+        background-color:black;
+        
+    }
+    .footer-distributed h1{
+        margin:500px;
+        padding:20px 10px 10px 10px;
+        color:  chartreuse;
+    }
+    .footer-distributed i{
+        color:  chartreuse;
+    }
+    #h3 span{
+      color:chartreuse;
+    }
+   .get button{
+    display: flexbox;
+    margin: 10px;
+    background: transparent;
+    padding: 3px;
+    border:none;
+   }
+   </style>
+   </head>
+   <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-lg navbar-expand-lg navbar-dark "id="navbar">
+    <div class="container-fluid">
+      <img src="./logo.webp">
+      <a class="navbar-brand" href="#"><span>@</span>Spices</a>
+      
+      <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto ">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#product">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          </ul>
+          <div class="me-2">
+            <span><i class="fa-sharp fa-solid fa-right-to-bracket"></i></span>
+            <button class="btn signin">Sign-in</button>
+            <button class="btn register">Register</button>
+         
+          </div>
+      
+          
+      </div>
+    </div>
+  </nav>
+  
+  
+  <!-- home -->
+  <section id="home">
+   <h1 class="mx-auto"><span>@</span>Spices</h1>
+      <div class="input-group mx-auto">
+        <input class="form-control" type="text" />
+      <button class="btn search">Search</button>
+      </div>
+
+   
+  </section>
+  <!-- about -->
+  <section id="about">
+    <div class="container-fluid">
+        <div class="row">
+          <h1>ABOUT US</h1>
+            <div class="col-lg-6 col-md-6 col-12">
+                <img src="./about.jpeg" class="img-fluid p-5 my-2">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 p-lg-7 p-5 my-2">
+                
+                <p>People these days think that organic farming is all a FAD, however, 
+                    organic farming was considered a conventional farming method back in the day. 
+                    When it comes to choosing organic food, we usually buy organically grown rice, 
+                    wheat, pulses, sugar, etc., but tend to forget about the spices. We probably don’t 
+                    think about them as we use them in moderation. 
+                    Here’s why you should ditch the regular spice and add organic spice in your food.
+                    <div>
+                    <h1>An Impeccable Culinary Legacy</h1>
+
+                    <p>Evoking memories of nourishing, healthy, and authentic cooking found in your family kitchen, 
+                    The Udupi Kitchen’s range of masalas invites you to create your own mouthwatering feast. 
+                    Bring back memories of sopping up your favourite chutney pudi with a crisp dosa, 
+                    fresh from a sizzling pan.
+                    Start new family traditions when you easily whip up a hearty Bisi Bele Bath for Sunday lunch.
+                    Wherever you are in the world, The Udupi Kitchen ensures you are never too far away from that 
+                    quintessentially South Indian taste of home cooking.</p>
+                  </div>
+                    <div >
+                    Woodland
+                    Gayrati
+                    The Mingling of
+                    Old & New
+                    Granddaughter of the pioneering legacies of Woodlands Hotels and Dasaprakash, Gayathri Rao created Udupi Kitchen to offer the very best from her family’s kitchen to yours.
+                    <br>
+
+                    Continuing the tradition of innovation that led to her ancestors inventing one of India’s favorite breakfasts – the Masala Dosa – Udupi Kitchen’s Flaxseed Chutney Pudi is a result of Gayathri’s efforts to build a culture of healthy eating while never compromising on taste.
+                    <br>
+                    The Kitchen Comes Alive
+                    These modern masalas blend a century of painstaking curation of traditional taste with the consistency in hygiene and quality offered by state-of-the-art processing technology. A passion for detail – from the hand-picked spices to the carefully calibrated blending – is what carries this famed legacy forward.
+                    <br>
+                    The charming culinary customs of an authentic Udupi kitchen are rediscovered in the warmth of your very own kitchen. Elevate your cooking easily with aromatic spices sourced for their superiority. Enjoy flavors so bold, they brighten the rest of your day. Compose a meal worth taking the time to savor.
+                  </div>
+               </p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- products -->
+  <section id="product">
+  <div class="container">
+    <h1 class="text-center my-5">OUR PRODUCTS</h1>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card ">
+          <img src="./elachi.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Elaichi</h5>
+            <a href="#" class="btn signin ">Add To Cart</a>
+          </div>
+       </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+          <div class="card" >
+            <img src="./Haldi.jpeg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Haldi</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card ">
+            <img src="./hing.jpeg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Hing</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./kali-mirch.jpeg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Kali Mirch</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./Laal-Mirch.jpeg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Laal-Mirch</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./Tej-Patta.jpeg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Tej Patta</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div> 
+         </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./garam-masala.jpeg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Garam masala</h5>
+              <a href="#" class="btn signin">Add To Cart </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./daachini.jpeg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Daachini</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="./Kasuri-Methi.jpeg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Kasuri Methi</h5>
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact -->
+  <footer id="contact">
+    <div class="footer-distributed">
+      <div class="footer-left">
+        <div class="container-fluid ">
+          <h1 class="text-center my-5">Contact Us</h1>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+             <h3 id="h3"><span>@ </span>spices</h3>
+             <p>customercare@organcospices.com</p>
+             
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+               <p><span><i class="fa fa-address-card-o p-1" aria-hidden="true"></i></span> Consumer Products Pvt.Ltd.<br>
+                26c,Thirumal Nagar, Vanchi Maniachi,<br>
+                Thirunelivelli-631456</p>
+               <p><span><i class="fa-sharp fa-light fa-phone p-1"></i></span>  +1 98745372662</p>
+               <p><span><i class="fa fa-mobile p-1" aria-hidden="true"></i></span>    spices@yahoo.com</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-12">
+                <div class="get">
+                  
+                    <h4>Get in touch</h4>
+                    <button ><i class="fa fa-twitter" aria-hidden="true"></i></button>
+                    <button ><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
+                    <button ><i class="fa fa-instagram" aria-hidden="true"></i></button>
+                    <h4>Work with us</h4>
+                    <p >hr@organcospices.com</p>
+                
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </footer>
+ 
+   
+    </body>
+</html>
